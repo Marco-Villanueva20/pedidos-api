@@ -34,15 +34,15 @@ Este proyecto está construido con herramientas robustas y populares en el ecosi
 
 La API gestiona la entidad principal **`Product`**, la cual se representa con los siguientes atributos:
 
-| Campo            | Tipo de Dato | Requerido     | Descripción                                              | Ejemplo                              |
-|:-----------------|:-------------|:--------------|:---------------------------------------------------------|:-------------------------------------|
-| `id`             | `Long`       | No (Generado) | Identificador único del producto.                        | `101`                                |
-| `name`           | `String`     | Sí            | Nombre legible del producto.                             | `"Laptop Gamer X1"`                  |
-| `originalPrice`  | `BigDecimal` | Sí            | Precio sin descuentos (precio base).                     | `1200.00`                            |
-| `offerPrice`     | `BigDecimal` | No            | Precio con descuento, si aplica.                         | `1099.50`                            |
-| `imageUrl`       | `String`     | No            | URL a la imagen principal del producto.                  | `https://api.domain.com/img/101.jpg` |
-| `hasDescription` | `Boolean`    | Sí            | Indica si el producto incluye una descripción detallada. | `true`                               |
-| `description`    | `String`     | No            | Descripción detallada del producto.                      | `"Potente laptop para juegos..."`    |
+| Campo             | Tipo de Dato  | Requerido     | Descripción                                                         | Ejemplo                              |
+|:------------------|:--------------|:--------------|:--------------------------------------------------------------------|:-------------------------------------|
+| `id`              | `Long`        | No (Generado) | Identificador único del producto.                                   | `101`                                |
+| `name`            | `String`      | Sí            | Nombre legible del producto.                                        | `"Laptop Gamer X1"`                  |
+| `originalPrice`   | `BigDecimal`  | Sí            | Precio sin descuentos (precio base).                                | `1200.00`                            |
+| `offerPrice`      | `BigDecimal`  | No            | Precio con descuento, si aplica.                                    | `1099.50`                            |
+| `imageUrl`        | `String`      | No            | URL a la imagen principal del producto.                             | `https://api.domain.com/img/101.jpg` |
+| **`hasDiscount`** | **`Boolean`** | **Sí**        | **Indica si el producto tiene un precio de oferta (`offerPrice`).** | `true`                               |
+| `description`     | `String`      | No            | Producto descripción detallada del producto.                        | `"Potente laptop para juegos..."`    |
 
 > **Nota sobre `BigDecimal`:** Se utiliza este tipo de dato para evitar problemas de precisión con la representación de
 > números decimales y moneda.
